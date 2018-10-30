@@ -72,9 +72,7 @@ namespace Lab13
         {
             if (t1 == t2)
                 return "=";
-            if (t1 == 0 && (int)t2 == 2)
-                return ">";
-            else if ((int)t1 > (int)t2 && !((int)t1 == 2 && (int)t2 == 0))
+            if ((t1 == 0 && (int)t2 == 2) || ((int)t1 > (int)t2 && !((int)t1 == 2 && (int)t2 == 0))  )
                 return ">";
             else
                 return "<";

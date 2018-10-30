@@ -9,7 +9,12 @@ namespace Lab13
     class Program
     {
         static void Main(string[] args)
-        {
+        {    //////////////////
+             // ~CONOTROLLS~ //
+             //left arrow -> //
+             //right arrow <-//
+             //enter key     //
+             //////////////////
             ROshamboApp game = new ROshamboApp();
             game.Play();
         }
