@@ -10,14 +10,15 @@ namespace Lab13
     {
         public override string Name { get; set; }
         public override int wins { get; set; }
-        public new Roshambo Ro = Roshambo.rock;
+        public override Roshambo Ro { get;set; }
         public PlayerGuile()
         {
             Name = "GUILE";
         }
         public override Roshambo generateRoshambo()
         {
-            return Roshambo.rock;
+            Ro = Roshambo.rock;
+            return Ro;
         }
     }
 }
