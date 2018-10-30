@@ -8,8 +8,8 @@ namespace Lab13
 {
     public enum Roshambo
     {
+        scissors,
         rock,
-        paper,
-        scissors
+        paper
     }
 }

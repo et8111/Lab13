@@ -10,6 +10,7 @@ namespace Lab13
     {
         public virtual string Name { get; set; }
         public virtual Roshambo Ro { get; set; }
+        public virtual int wins { get; set; }
 
         public abstract Roshambo generateRoshambo();
     }

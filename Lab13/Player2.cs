@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace Lab13
 {
-    class Player2
+    class Player2: Player
     {
-        public string Name { get; set; }
-        public Roshambo Ro;
+        public override string Name { get; set; }
+        public override Roshambo Ro { get; set; }
+        public override int wins { get; set; }
 
-        public Player2(string n)
+        public Player2()
         {
-            Name = n;
+            Console.Write("FIGHTERS NAME: ");
+            string s = Console.ReadLine().ToUpper();
+            Name = s;
         }
 
-        public Roshambo generateRoshambo()
+        public override Roshambo generateRoshambo()
         {
             Random r = new Random();
             Ro = (Roshambo)r.Next(0, 3);

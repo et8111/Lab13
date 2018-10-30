@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace Lab13
 {
-    class PlayerGuile
+    class PlayerGuile: Player
     {
-        public string Name { get;}
-        public Roshambo Ro = Roshambo.rock;
+        public override string Name { get; set; }
+        public override int wins { get; set; }
+        public new Roshambo Ro = Roshambo.rock;
         public PlayerGuile()
         {
-            Name = "Guile";
+            Name = "GUILE";
         }
-        public Roshambo generateRoshambo()
+        public override Roshambo generateRoshambo()
         {
-            return Ro;
+            return Roshambo.rock;
         }
     }
 }

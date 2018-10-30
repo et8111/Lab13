@@ -8,12 +8,13 @@ namespace Lab13
 {
     class LimboPlayer: Player
     {
-        public new string Name { get; }
-        public new Roshambo Ro { get; set; }
+        public override string Name { get; set; }
+        public override Roshambo Ro { get; set; }
+        public override int wins { get; set; }
 
         public LimboPlayer()
         {
-            Name = "Limbo";
+            Name = "LIMBO";
         }
 
         public override Roshambo generateRoshambo()
