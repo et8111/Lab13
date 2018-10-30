@@ -8,9 +8,6 @@ namespace Lab13
 {
     class ROshamboApp
     {
-        public int[] player1Score { get; set; }
-        public int[] player2Score { get; set; }
-
         public List<Player> players;
 
         public void Play()
@@ -23,7 +20,7 @@ namespace Lab13
             else
                 players.Add(new Player2());
             Prefight(players);
-            choice = SELCTOR("NOW", "NONE VIOLENCE", "     NEW CHACTER?", "", "");
+            choice = SELCTOR("YAAS", "I SAID NO SMOKE", "     NEW CHACTER?", "", "");
             if (choice != 1)
                 return;
             Play();
@@ -77,7 +74,7 @@ namespace Lab13
                 return "=";
             if (t1 == 0 && (int)t2 == 2)
                 return ">";
-            else if ((int)t1 > (int)t2)
+            else if ((int)t1 > (int)t2 && !((int)t1 == 2 && (int)t2 == 0))
                 return ">";
             else
                 return "<";
@@ -86,7 +83,7 @@ namespace Lab13
         public int SELCTOR(string c1, string c2, string banner, string LsubMessage, string UsubMessage)
         {
             ConsoleColor Current = Console.ForegroundColor;
-            Console.Clear();
+            Console.Clear();                                                                //ensure everything lines up
             Console.WriteLine(banner+ "\n" + UsubMessage + "\n" + "=".PadLeft(c1.Length+c2.Length+6,'=') + "\n" + LsubMessage);
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write(c1);
