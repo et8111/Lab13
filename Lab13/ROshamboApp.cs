@@ -35,7 +35,7 @@ namespace Lab13
             if (choice == 2)
                 return;
             p1[0].generateRoshambo();
-            System.Threading.Thread.Sleep(77);                 //try to force diffrent random outcome by adjustring time
+            System.Threading.Thread.Sleep(83);                 //try to force diffrent random outcome by adjustring time
             p1[1].generateRoshambo();
             string temp3 = Fightlogic(p1[0].Ro, p1[1].Ro);
             if (temp3 == ">")
@@ -52,7 +52,7 @@ namespace Lab13
             else
                 Console.WriteLine($"{p1[0].Ro,-10}{temp3, -2}{p1[1].Ro, 8}\n       DRAW!!!!");
             while (Console.KeyAvailable)                                                    //clear buffer
-                Console.ReadKey(true);
+                Console.ReadKey(true);                                                      //
             Console.ReadLine();
             Prefight(players);
         }
@@ -87,8 +87,7 @@ namespace Lab13
         {
             ConsoleColor Current = Console.ForegroundColor;
             Console.Clear();
-            Console.WriteLine(banner+ "\n" + UsubMessage);
-            Console.WriteLine("=".PadLeft(c1.Length+c2.Length+6,'=') + "\n" + LsubMessage);
+            Console.WriteLine(banner+ "\n" + UsubMessage + "\n" + "=".PadLeft(c1.Length+c2.Length+6,'=') + "\n" + LsubMessage);
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write(c1);
             Console.ForegroundColor = Current;
